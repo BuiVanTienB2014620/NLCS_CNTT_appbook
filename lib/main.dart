@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
           theme: ThemeData(
             fontFamily: 'Lato',
             colorScheme: ColorScheme.fromSwatch(
-              primarySwatch: Colors.grey,
+              primarySwatch: Colors.deepOrange,
             ).copyWith(
               secondary: Colors.deepOrange,
             ),
@@ -68,6 +68,79 @@ class _MyAppState extends State<MyApp> {
           home: authManager.isAuth
               ? Scaffold(
                   body: pages[_selectedPageIndex],
+                  // bottomNavigationBar: BottomNavigationBar(
+                  //   items: const [
+                  //     BottomNavigationBarItem(
+                  //       icon: Icon(Icons.home),
+                  //       label: 'Home',
+                  //     ),
+                  //     BottomNavigationBarItem(
+                  //       icon: Icon(Icons.shopping_cart),
+                  //       label: 'Cart',
+                  //     ),
+                  //     BottomNavigationBarItem(
+                  //       icon: Icon(Icons.list),
+                  //       label: 'Orders',
+                  //     ),
+                  //     BottomNavigationBarItem(
+                  //       icon: Icon(Icons.person),
+                  //       label: 'User',
+                  //     ),
+                  //   ],
+                  //   currentIndex: _selectedPageIndex,
+                  //   onTap: _selectPage,
+                  // ),
+                  // persistentFooterButtons: <Widget>[
+                  //   Container(
+                  //     color: Colors.deepOrange, // Màu nền cam cho footer
+                  //     height: 60, // Chiều cao của footer
+                  //     child: Row(
+                  //       mainAxisAlignment: MainAxisAlignment
+                  //           .spaceEvenly, // Các biểu tượng cách đều nhau
+                  //       children: <Widget>[
+                  //         Icon(
+                  //           Icons.home,
+                  //           color: Colors.white, // Màu biểu tượng trắng
+                  //           size: 30, // Kích thước biểu tượng
+                  //         ),
+                  //         Icon(
+                  //           Icons.shopping_cart,
+                  //           color: Colors.white, // Màu biểu tượng trắng
+                  //           size: 30, // Kích thước biểu tượng
+                  //         ),
+                  //         Icon(
+                  //           Icons.person,
+                  //           color: Colors.white, // Màu biểu tượng trắng
+                  //           size: 30, // Kích thước biểu tượng
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ],
+                  // bottomNavigationBar: CurvedNavigationBar(
+                  //     backgroundColor: Colors.transparent,
+                  //     onTap: (index) {
+                  //       // _handleNavigation(index);
+                  //     },
+                  //     height: 70,
+                  //     color: Color(0xff4c53a5),
+                  //     items: [
+                  //       Icon(
+                  //         Icons.browser_updated_sharp,
+                  //         size: 30,
+                  //         color: Colors.white,
+                  //       ),
+                  //       Icon(
+                  //         Icons.home,
+                  //         size: 30,2
+                  //         color: Colors.white,
+                  //       ),
+                  //       Icon(
+                  //         Icons.person,
+                  //         size: 30,
+                  //         color: Colors.white,
+                  //       ),
+                  //     ]),
                 )
               : FutureBuilder(
                   future: authManager.tryAutoLogin(),

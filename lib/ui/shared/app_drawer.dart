@@ -40,16 +40,6 @@ class AppDrawer extends StatelessWidget {
                   .pushReplacementNamed(UserProductsScreen.routeName);
             },
           ),
-          // if (currentUserEmail == 'tienb2014620@gmail.com') const Divider(),
-          // if (currentUserEmail == 'tienb2014620@gmail.com')
-          //   ListTile(
-          //     leading: const Icon(Icons.browser_updated_sharp),
-          //     title: const Text('Quản lí sản phẩm'),
-          //     onTap: () {
-          //       Navigator.of(context)
-          //           .pushReplacementNamed(UserProductsScreen.routeName);
-          //     },
-          //   ),
           const Divider(),
           ListTile(
             leading: const Icon(Icons.exit_to_app),
